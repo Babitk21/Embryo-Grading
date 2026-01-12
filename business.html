@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blastocyst Grading AI</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body class="business-page">
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html">Home</a>
+        <a href="business.html" class="active">Business Goal</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="results.html">Results</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Business Goal</h1>
+    <p>
+        Reducing subjectivity and improving consistency in embryo grading.
+    </p>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <div class="card">
+            <h2>Clinical Motivation</h2>
+            <p>
+                IVF success depends heavily on selecting the most viable embryo.
+                Even experienced embryologists may disagree in grading outcomes,
+                leading to variability in embryo selection decisions.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>AI as Decision Support</h2>
+            <p>
+                This system is designed to assist clinicians rather than replace them.
+                It provides a reproducible, consistent second opinion that supports
+                training, research, and standardization in embryo grading workflows.
+            </p>
+        </div>
+
+    </div>
+</section>
+<script>
+    document.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", e => {
+            if (link.href && link.href.includes(".html")) {
+                e.preventDefault();
+                document.body.classList.add("fade-out");
+                setTimeout(() => {
+                    window.location = link.href;
+                }, 400);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

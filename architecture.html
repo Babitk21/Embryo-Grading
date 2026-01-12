@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blastocyst Grading AI</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body class="architecture-page">
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html">Home</a>
+        <a href="business.html">Business Goal</a>
+        <a href="architecture.html" class="active">Architecture</a>
+        <a href="results.html">Results</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>System Architecture</h1>
+    <p>
+        End-to-end AI pipeline for blastocyst quality assessment.
+    </p>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <div class="card">
+            <h2>Overall Pipeline</h2>
+            <p>
+                The system follows a structured pipeline starting from embryo image
+                acquisition and ending with interpretable grading outputs.
+                Each stage is designed to ensure consistency and reproducibility.
+            </p>
+            <p>
+                <strong>Pipeline Flow:</strong><br>
+                Image Input → Preprocessing → Deep Learning Model →
+                Multi-Output Predictions → Inference Interpretation →
+                User Interface
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Image Preprocessing</h2>
+            <p>
+                Input embryo images are resized, normalized, and standardized
+                to ensure uniform input distribution for the model.
+                This step reduces noise and improves learning stability.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Model Design</h2>
+            <p>
+                A convolutional neural network (CNN) is used to extract spatial
+                and morphological features from embryo images.
+                The network produces independent predictions for:
+            </p>
+            <ul>
+                <li>Inner Cell Mass (ICM)</li>
+                <li>Trophectoderm (TE)</li>
+                <li>Expansion (EXP)</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Inference Layer</h2>
+            <p>
+                Raw model outputs are post-processed into interpretable grades.
+                This allows the system to present predictions in a form that
+                aligns with clinical grading standards.
+            </p>
+        </div>
+
+    </div>
+</section>
+<script>
+    document.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", e => {
+            if (link.href && link.href.includes(".html")) {
+                e.preventDefault();
+                document.body.classList.add("fade-out");
+                setTimeout(() => {
+                    window.location = link.href;
+                }, 400);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blastocyst Grading AI</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body class="results-page">
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html">Home</a>
+        <a href="business.html">Business Goal</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="results.html" class="active">Results</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Results & Observations</h1>
+    <p>
+        Key insights and limitations observed during model development.
+    </p>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <div class="card">
+            <h2>Model Performance</h2>
+            <p>
+                The model demonstrated stronger learning behavior for
+                <strong>Expansion (EXP)</strong> grading compared to
+                ICM and TE, which present more subtle visual features.
+            </p>
+            <p>
+                This observation aligns with clinical understanding, where
+                expansion stage shows clearer morphological differences.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Prediction Consistency</h2>
+            <p>
+                Predictions were found to be consistent across similar embryo
+                images, indicating that the model learned stable visual patterns
+                rather than random noise.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Limitations</h2>
+            <p>
+                Performance is constrained by dataset size, annotation quality,
+                and inherent subjectivity in grading labels.
+                The model should be interpreted as a decision-support tool
+                rather than a diagnostic system.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Future Improvements</h2>
+            <p>
+                Potential improvements include larger datasets, time-lapse
+                embryo imaging, and explainability techniques to visualize
+                which regions influence predictions.
+            </p>
+        </div>
+        <div class="card" style="text-align:center;">
+            <h2>Live Demo</h2>
+            <p>
+                Explore the deployed AI system and test blastocyst grading
+                predictions interactively using real embryo images.
+            </p>
+
+            <a href="https://blastocyst-grading.streamlit.app/"
+               target="_blank"
+               class="demo-button">
+                Launch Live Application
+            </a>
+        </div>
+    </div>
+    <section class="video-section">
+    <h2>Project Demo</h2>
+    <p>This short video explains the business goal, system architecture, and how the Blastocyst Grading AI works end-to-end.</p>
+
+    <div class="video-container">
+        <iframe
+            src="https://player.vimeo.com/video/1153558902"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+</section>
+<script>
+    document.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", e => {
+            if (link.href && link.href.includes(".html")) {
+                e.preventDefault();
+                document.body.classList.add("fade-out");
+                setTimeout(() => {
+                    window.location = link.href;
+                }, 400);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
